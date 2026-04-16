@@ -197,10 +197,10 @@
     /* padding: 5px 5px; */
   }
   
-  [data-theme=material] .widget:hover {
-    /*box-shadow: var(--md-shadow-2);*/
+  /*[data-theme=material] .widget:hover {
+    box-shadow: var(--md-shadow-2);
     border-bottom: 1px solid var(--md-sys-color-primary);
-  }
+  }*/
   
   /* [data-theme=material] .widget .widget-head {
     padding: 16px;
