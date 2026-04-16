@@ -1,0 +1,12 @@
+[
+ {
+  "name": "User-desk_theme-options",
+  "doc_type": "User",
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "desk_theme",
+  "property": "options",
+  "property_type": "Small Text",
+  "value": "Light\nDark\nAutomatic\nMaterial"
+ }
+]
