@@ -283,16 +283,17 @@
     transition: background-color 0.2s, color 0.2s;
   }
   
-  [data-theme=material] .awesomplete > ul > li[aria-selected=true] {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-primary);
-  }
- 
   [data-theme=material] .awesomplete > ul > li:hover {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-primary) !important;
     box-shadow: var(--md-shadow-1);
-  } 
+  }
+
+  [data-theme=material] .awesomplete > ul > li[aria-selected=true] {
+    background-color: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+    font-weight: var(--md-font-weight-medium);
+  }
   
   /* Page Heading */
   [data-theme=material] .page-head {
@@ -622,4 +623,27 @@
   [data-theme=material] .notifications-icon svg {
     stroke: var(--md-sys-color-on-primary);
     fill: var(--md-sys-color-on-primary);
+  }
+
+  /* Text selection — Frappe base sets a #e2e2e2 highlight which is invisible
+     on Material's dim input surface (--md-sys-color-surface-dim ≈ #d9dae0).
+     Must be attached to input-type selectors, not a generic descendant
+     rule — the latter has no effect inside native form controls.
+     Uses !important to defeat any per-control overrides in the base. */
+  [data-theme=material] input::selection,
+  [data-theme=material] textarea::selection,
+  [data-theme=material] .form-control::selection,
+  [data-theme=material] .like-disabled-input::selection,
+  [data-theme=material] [contenteditable="true"]::selection {
+    background-color: #4a90d9 !important;
+    color: #ffffff !important;
+  }
+
+  [data-theme=material] input::-moz-selection,
+  [data-theme=material] textarea::-moz-selection,
+  [data-theme=material] .form-control::-moz-selection,
+  [data-theme=material] .like-disabled-input::-moz-selection,
+  [data-theme=material] [contenteditable="true"]::-moz-selection {
+    background-color: #4a90d9 !important;
+    color: #ffffff !important;
   }
